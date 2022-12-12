@@ -5,13 +5,13 @@ import baseConfig from "../../vite.config";
 export default extendConfig(baseConfig, () => {
   return {
     ssr: {
-      external: ["stream"],
+      external: ["stream, util"],
       noExternal: undefined
     },
     build: {
       ssr: true,
       rollupOptions: {
-        external: ["stream", "node:stream"],
+        external: ["stream", "util"],
         input: ["src/entry.vercel-edge.tsx", "@qwik-city-plan"]
       },
       outDir: ".vercel/output/functions/_qwik-city.func"
