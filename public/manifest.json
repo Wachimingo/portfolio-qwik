@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "portfolio",
+  "short_name": "Welcome",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A portfolio to showcase my skillset"
+}

@@ -1,0 +1,73 @@
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--font-color);
+}
+
+div[role="progressbar"]:hover::before {
+  position: relative;
+  z-index: 100;
+  top: 1.5em;
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+.skill-icon {
+  position: relative;
+  top: 0.15em;
+  border-radius: 100%;
+}
+/* .skill-icon:hover {
+  filter: brightness(50%);
+} */
+
+div[role="progressbar"] > h3 {
+  position: relative;
+  top: 0.5em;
+  font-size: 0.5em;
+  font-weight: bold;
+}
+div[role="progressbar"]:hover > h3 {
+  color: var(--info);
+  position: relative;
+  top: -1em;
+  font-size: 0.5em;
+  font-weight: bold;
+}
+div[role="progressbar"]:hover > .skill-icon {
+  top: -1em;
+  filter: brightness(25%);
+}
+div[role="progressbar"]:hover {
+  cursor: pointer;
+  background: radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(rgb(3, 138, 184) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+}

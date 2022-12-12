@@ -1,0 +1,30 @@
+.hamburger {
+  z-index: 2;
+  margin: auto 0 auto auto;
+  width: 25px;
+  min-width: 35px;
+  padding: 5px;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  top: 1vh;
+  right: 2vw;
+}
+
+.hamburger > .ham-divs {
+  height: 3px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.hamburger > div:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 416px) {
+  .hamburger {
+    display: none !important;
+  }
+}

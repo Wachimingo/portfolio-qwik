@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  background-color: transparent;
+  padding: 1em 1.5em;
+  top: 2vh;
+}
+.success {
+  border: 2px solid var(--success);
+  color: var(--success);
+}
+
+.success:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--success);
+}
+.info {
+  border: 2px solid var(--info);
+  color: var(--info);
+}
+
+.info:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--info);
+}
+
+.error {
+  border: 2px solid var(--error);
+  color: var(--error);
+}
+
+.error:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--error);
+}

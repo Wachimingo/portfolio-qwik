@@ -1,0 +1,25 @@
+.card-body {
+  position: relative;
+  width: 100%;
+  padding: 0 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+}
+.card-body > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.card-body > progress {
+  width: 100%;
+}
+
+.card-image {
+  width: 10em;
+  height: 10em;
+}

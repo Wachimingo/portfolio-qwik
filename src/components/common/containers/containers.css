@@ -1,0 +1,14 @@
+.container-flex {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.container-column {
+  flex-direction: column;
+}
+.container-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
