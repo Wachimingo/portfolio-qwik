@@ -5,7 +5,8 @@ import baseConfig from "../../vite.config";
 export default extendConfig(baseConfig, () => {
   return {
     ssr: {
-      noExternal: undefined
+      noExternal: undefined,
+      external: ["node:stream"]
     },
     build: {
       ssr: true,
