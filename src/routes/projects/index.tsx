@@ -1,6 +1,5 @@
 import { component$, Resource, useResource$, useStore } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
-import { Card } from "~/components/common/card";
 import { Main, Section } from "~/components/common/containers";
 import { ProjectCard } from "~/components/projects/ProjectsCard";
 import { getProjects } from "~/controllers";
