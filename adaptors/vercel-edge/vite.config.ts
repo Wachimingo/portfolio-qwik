@@ -6,7 +6,7 @@ export default extendConfig(baseConfig, () => {
   return {
     ssr: {
       noExternal: undefined,
-      external: ["node:stream"]
+      external: ["stream"]
     },
     build: {
       ssr: true,
