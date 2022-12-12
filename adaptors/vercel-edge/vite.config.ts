@@ -11,7 +11,7 @@ export default extendConfig(baseConfig, () => {
     build: {
       ssr: true,
       rollupOptions: {
-        external: ["stream", "util", "events", "mongodb"],
+        external: ["stream", "util", "events"],
         input: ["src/entry.vercel-edge.tsx", "@qwik-city-plan"]
       },
       outDir: ".vercel/output/functions/_qwik-city.func"
