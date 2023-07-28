@@ -5,7 +5,7 @@ class DatabaseServer {
   static _conn: MongoClient;
   static ongoingTransactions = 0;
   private constructor() {
-    const uri = "mongodb+srv://tabs7:preespecialidad@wachimingo.aorej.mongodb.net/microempresa?retryWrites=true";
+    const uri = "";
     const opts: any = {
       useNewUrlParser: true,
       useUnifiedTopology: true
